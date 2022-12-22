@@ -1,20 +1,21 @@
 """
-Selection Sort und Quicksort
-
+Aufg 1: Selection Sort und Quicksort implementieren
 """
-
 def selectionSort(array):
     """
-     Traverse the given Array, pick by every step the smallest element
-     and put it into the array to be returned
+     Traverse by every step the unsorted part of the given Array,
+     pick the smallest element and put it into the sorted part
     :param array: the given array to be sorted
     :return: the sorted array
     """
-    sortedArray = [0]*len(array) # simulate the array initialization
     for i in range(len(array)):
         min_idx = i
-        for j in range(i+1, len(array)):
+        for j in range(i + 1, len(array)):
             if array[min_idx] > array[j]:
                 min_idx = j
-        sortedArray[i] = array[min_idx]
-    return sortedArray
+        array[i], array[min_idx] = array[min_idx], array[i]
+    return array
+
+array = [7,5,8,1]
+array=selectionSort(array)
+print(array)
