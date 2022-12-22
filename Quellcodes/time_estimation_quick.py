@@ -32,8 +32,8 @@ Now calculate C with the data form the last group, where other polynom terms can
 """
 # Quick sort
 n_nlogn = array_sizes * np.array(np.log(array_sizes)) # nlogn
-C =  q_times / n_nlogn[-1] # C = T(n) / n^2
-t_asympt = C * n_nlogn # T(n)_asympt = C * n^2
+C =  q_times / n_nlogn[-1] # C = T(n) / nlogn
+t_asympt = C * n_nlogn # T(n)_asympt = C * nlogn
 
 x = array_sizes
 y1 = q_times
