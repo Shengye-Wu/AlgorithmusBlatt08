@@ -1,23 +1,20 @@
 """
 Selection Sort und Quicksort
 
-Prinzip vom
 """
 
 def selectionSort(array):
     """
-     Selection Sort: Erstelle ein neues Array, läuft schrittweise durch
-     das eingegebene Array um das kleinste Elem davon auszuwählen, löschen
-     und ins neue Array hinzufügen.
-     Notiert, dass in unserem Code kein neues Array erstellt ist, stattdessen
-     wird die ersten Stellen [0:i] als bereits sortierten Teil betrachtet.
-    :param array:
-    :return:
+     Traverse the given Array, pick by every step the smallest element
+     and put it into the array to be returned
+    :param array: the given array to be sorted
+    :return: the sorted array
     """
+    sortedArray = [0]*len(array) # simulate the array initialization
     for i in range(len(array)):
         min_idx = i
         for j in range(i+1, len(array)):
             if array[min_idx] > array[j]:
                 min_idx = j
-        array[i], array[min_idx] = array[min_idx], array[i]
-    return array
+        sortedArray[i] = array[min_idx]
+    return sortedArray
