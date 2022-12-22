@@ -14,4 +14,5 @@ def quickSort(array):
             rlist.append(array[i])
         else:
             mlist.append(array[i])
+
     return quickSort(llist) + mlist + quickSort(rlist) # Recursive call: put all sorted parts together
